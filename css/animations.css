@@ -1,0 +1,96 @@
+.box {
+  transition: all 2s ease-in-out;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.robot-eye-left {
+  animation-name: change-eye;
+}
+
+.robot-eye-right {
+  animation-name: dis-eye;
+}
+
+.robot-ear-left {
+  transform: rotate(720deg);
+}
+
+.robot-ear-right {
+  animation-name: change-eye;
+}
+
+.ear {
+  animation-name: ear;
+  transition-timing-function: ease-in-out;
+}
+
+.robot-nose:hover {
+  opacity: 0;
+}
+
+.robot-tooth:hover {
+  border-radius: 50%;
+  background-color: black;
+  scale: 1.5;
+}
+
+.robot-hair-style {
+  animation-name: hair;
+}
+
+@keyframes dis-eye {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes change-eye {
+  25% {
+    background-color: blue;
+    height: 70px;
+    width: 120px;
+  }
+  50% {
+    background-color: blueviolet;
+    height: 60px;
+    width: 110px;
+  }
+
+  100% {
+    background-color: chartreuse;
+    height: 80px;
+    width: 130px;
+  }
+}
+
+@keyframes ear {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(760deg);
+  }
+}
+
+@keyframes hair {
+  25% {
+    transform: translateY(-50px);
+  }
+
+  50% {
+    transform: translateX(50px);
+  }
+
+  75% {
+    transform: translateX(-100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
